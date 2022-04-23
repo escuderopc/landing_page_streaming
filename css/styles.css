@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+}
+/* Iconos */
+.icon{
+    width: 20px;
+    height: 20px;
+}
+/* ---- Navbar--- */
+.navbar{
+    position: sticky;
+    top: 0%;
+    display: flex;
+    padding: 0 4%;
+    min-height: 68px;
+    align-items: center;
+    font-size: small;
+}
+.nav_logo{
+    display: flex;
+    align-items: center ;
+}
+.nav_logo > img{
+    height: 80px;
+}
+.nav_browse{
+    flex: 1 0 auto;
+    margin-left: 32px;
+}
+.nav_browse  > ul{
+    list-style: none;
+
+}
+.nav_browse > ul >li{
+    display: inline;
+    margin-left: 16px;
+}
+.nav_browse > ul > li:first-child{
+    margin-left: 0%;
+
+}
+.nav_browse > ul >li:not(.nav_browse_select) > a:hover{
+    color: gray;
+}
+.nav_browse > ul > li > a{
+    text-decoration: none;
+    transition: all 200ms ease-in;
+    color: inherit;
+    
+}
+.nav_browse_select{
+    font-weight: bold;
+}
+.nav_menu{
+    display: flex;
+    align-items: center;
+}
+.nav_menu > img{
+    margin-right: 10px;
+    cursor: pointer;
+}
+.nav_menu > img:last-child{
+    margin-right: 0;
+    width: 80px;
+    height: auto;
+}
+/* navbar mobile */
+.navbar_menu_mobile{
+    display: none;
+}
+/* @media queries */
+@media only screen and (max-width: 768px) {
+    .nav_logo{
+        flex: 1 0 auto;
+    }
+    .nav_browse{
+        display: none;
+    }
+    .nav_menu{
+        display: none;
+    }
+    .navbar_menu_mobile{
+        display: block;
+        position: relative;
+    }
+    .navbar_menu_mobile > img{
+      width: 34px;
+      height: auto;  
+    }
+    .navbar_menu_mobile_list{
+        position: absolute;
+        border-radius: 4px;
+        background-color: aqua;
+    }
+    .navbar_menu_mobile_list img{
+        padding: 8px 4px;
+    }
+    .navbar_menu_mobile:hover > .navbar_menu_mobile_list{
+        display: block;
+    }
+
+    
+}
